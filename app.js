@@ -11,10 +11,8 @@ app.use(cors());
 
 //connecting to mongod Db
 connectDb();
-app.use("/auth", userRoutes);
-app.use("/alert", alertRoutes);
-
-
+app.use("/api/auth", userRoutes);
+app.use("/api/alert", alertRoutes);
 
 const port = process.env.PORT;
 app.listen(port, () => {
